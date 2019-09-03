@@ -6,6 +6,7 @@
         "src/Resources/config/": "%CONFIG_DIR%/"
     },
     "env": {
+        "BASE_URL": "/public",
         "CACHE_DIR": "/cache",
         "SSO_SECRET": "secret",
         "SERVER_URL": "https://localhost/api"
