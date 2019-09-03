@@ -8,7 +8,7 @@
     "env": {
         "BASE_URL": "/public",
         "CACHE_DIR": "/cache",
-        "SSO_SECRET": "secret",
+        "SSO_SECRET": "secretkey",
         "SERVER_URL": "https://localhost/api"
     }
 }
