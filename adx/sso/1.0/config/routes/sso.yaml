@@ -1,0 +1,7 @@
+sso:
+    resource: '@SSOBundle/Resources/config/routes.yaml'
+    prefix: /adx_sso
+
+sso_annotations:
+    resource: '@SSOBundle/Controller/'
+    prefix: /adx_sso
