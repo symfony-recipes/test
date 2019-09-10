@@ -1,0 +1,54 @@
+security:
+    encoders:
+        adx\SSO\Entity\User:
+            id: 'adx\SSO\Security\Encoder\DefaultUserPasswordEncoder'
+
+    providers:
+        app_user_provider:
+            entity:
+                class: adx\SSO\Entity\User
+        
+    # firewalls:
+    #     register:
+    #         pattern:  ^/adx_sso/api/users/register
+    #         stateless: true
+    #         anonymous: true
+    #     refresh:
+    #         pattern:  ^/adx_sso/api/token/refresh
+    #         stateless: true
+    #         anonymous: true
+    #     doc:
+    #         pattern:  ^/adx_sso/api/doc
+    #         stateless: true
+    #         anonymous: true
+    #     sso_api:
+    #         pattern:  ^/adx_sso/api/sso
+    #         stateless: true
+    #         anonymous: true
+    #     login:
+    #         pattern:  ^/adx_sso/api/auth
+    #         stateless: true
+    #         anonymous: true
+    #         json_login:
+    #             check_path:               /adx_sso/api/auth
+    #             success_handler:          lexik_jwt_authentication.handler.authentication_success
+    #             failure_handler:          lexik_jwt_authentication.handler.authentication_failure
+
+    #     api:
+    #         pattern:   ^/adx_sso/api
+    #         stateless: true
+    #         guard:
+    #             authenticators:
+    #                 - lexik_jwt_authentication.jwt_token_authenticator
+                   
+    # access_control:
+    #     - { path: ^/adx_sso/api/auth, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    #     - { path: ^/adx_sso/api/doc, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    #     - { path: ^/adx_sso/api/sso, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    #     - { path: ^/adx_sso/api/users/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    #     - { path: ^/adx_sso/api/token/refresh, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    #     - { path: ^/adx_sso/api,       roles: IS_AUTHENTICATED_FULLY }
+        
+    # access_decision_manager:
+    #     strategy: unanimous #affirmative
+    #     allow_if_all_abstain: false
