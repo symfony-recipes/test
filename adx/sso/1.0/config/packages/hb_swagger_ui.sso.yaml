@@ -1,0 +1,4 @@
+hb_swagger_ui:
+  directory: "%kernel.root_dir%/../collections/"
+  files:
+    - "%env(SERVER_URL)%doc/yaml"
