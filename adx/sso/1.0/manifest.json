@@ -1,9 +1,10 @@
 {
     "bundles": {
-        "HarmBandstra\\SwaggerUiBundle\\HBSwaggerUiBundle": ["all"]
+        "HarmBandstra\\SwaggerUiBundle\\HBSwaggerUiBundle": ["all"],
+        "adx\\SSO\\SSOBundle": ["all"]
     },
-    "copy-from-package": {
-        "src/Resources/config/": "%CONFIG_DIR%/"
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "BASE_URL": "/public",
